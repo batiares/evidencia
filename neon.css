@@ -1,0 +1,252 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family:"Grechen Fuemen", serif;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     
+}
+
+.header{
+    display: flex;
+}
+
+.intro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    background: #000;
+    transition: 1;
+}
+
+.intro p {
+    color: gray;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.intro img{
+    top: 150px;
+    position: absolute;
+}
+
+.logoo{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.logoo-parts{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logoo-parts.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out .5s;
+}
+
+.logoo-parts.fade{
+    bottom: 250px;
+    opacity: 0;
+    transition: ease-in-out .5s;
+}
+
+.content{
+    display: flex;
+    padding: 5px;
+    font-size: 2rem;
+    
+}
+
+body {
+    background-image: url("./imgs/Captura\ de\ pantalla\ 2025-02-19\ 003512.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #f0f0f0; 
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.neon, .neon2, .neon3, .neon4, .neon5, .vinculos {
+    text-align: center;
+}
+
+.container .btn-menu .logo{
+    float: left;
+    line-height: 70px;
+}
+
+.container .btn-menu label{
+    color: #f0f0f0;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cen{
+    display: block;
+    margin: auto;
+}
+
+#btn-menu{
+    display: none;
+}
+
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0; left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+
+.cont-menu nav{
+    transform: translateY(15%);
+}
+
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.neon {
+    font-family: "Grechen Fuemen", serif;
+    letter-spacing: 5px;
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 0 0 5px purple, 0 0 15px purple, 0 0 30px purple, 0 0 50px purple;
+}
+
+.neon2 {
+    font-family: monospace;
+    margin: 0;
+    font-size: 60px;
+    text-shadow: 0 0 5px pink, 0 0 15px pink, 0 0 30px pink, 0 0 50px pink;
+}
+
+.neon3 {
+    font-family: monospace;
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 0 0 5px violet, 0 0 15px violet, 0 0 30px violet, 0 0 50px violet;
+}
+
+.neon4 {
+    font-family: monospace;
+    margin: 0;
+    font-size: 50px;
+    text-shadow: 0 0 5px white, 0 0 15px white, 0 0 30px white, 0 0 50px white;
+}
+
+.neon5 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    color: rgb(254, 254, 254);
+    font-size: 30px;
+    text-shadow: 0 0 5px violet, 0 0 15px violet, 0 0 30px violet, 0 0 50px violet;
+}
+
+.vinculos{
+        text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    color: rgb(254, 254, 254);
+    font-size: 25px;
+    text-shadow: 0 0 5px violet, 0 0 15px violet, 0 0 30px violet, 0 0 50px violet;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.flinger1 {
+    animation: parpadear 2s infinite backwards steps(3);
+}
+
+.flinger2 {
+    animation: parpadear 1.5s infinite backwards steps(2);
+}
+
+@media (min-width: 480px){
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1024px){
+
+}
+
+@keyframes parpadear {
+    to {
+        color: gray;
+        text-shadow: none;
+    }
+}
